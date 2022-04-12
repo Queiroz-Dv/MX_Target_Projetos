@@ -52,7 +52,7 @@ namespace MX_Target_Projetos
                     Sequencial.Load();
                     break;
                 case 2:
-                    Console.WriteLine("View");
+                    PularNumeros.Load();
                     break;
                 case 0:
                     {

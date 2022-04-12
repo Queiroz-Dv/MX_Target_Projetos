@@ -46,6 +46,7 @@
     <Compile Include="Configuratios\MenuAcessoConfig.cs" />
     <Compile Include="MenuAcesso.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjetosPequenos\PularNumeros.cs" />
     <Compile Include="ProjetosPequenos\Sequencial.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -51,7 +51,7 @@ namespace MX_Target_Projetos.ProjetosPequenos
         private static void TesteSeq()
         {
             Console.Clear();
-            EscritorOpcoes(out int numeroInicial, out int numeroFinal);
+            GetDados(out int numeroInicial, out int numeroFinal);
 
             // Condição para caso o usuário digitar um numero menor que outro 
             if (numeroInicial >= numeroFinal)
@@ -91,7 +91,7 @@ namespace MX_Target_Projetos.ProjetosPequenos
         }
 
         // Método que coleta as informações
-        private static void EscritorOpcoes(out int numeroInicial, out int numeroFinal)
+        private static void GetDados(out int numeroInicial, out int numeroFinal)
         {
             GlobalConfig.Centralizar("Digite um número inicial para que eu possa contar: ");
             numeroInicial = int.Parse(Console.ReadLine());

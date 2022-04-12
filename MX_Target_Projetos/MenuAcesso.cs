@@ -1,20 +1,23 @@
 ﻿using MX_Target_Projetos.Configuratios;
+using MX_Target_Projetos.ProjetosPequenos;
 using System;
 
 namespace MX_Target_Projetos
 {
-    public static  class MenuAcesso
-    {        
-        public  static void Load()
+    public static class MenuAcesso
+    {
+        public static void Load()
         {
-            MenuAcessoConfig.Windowconfig();
+            MenuAcessoConfig config = new MenuAcessoConfig();
             Console.Clear();
             GlobalConfig.Centralizar("==== Bem Vindo ao Portfólio de Sistemas Realizados por E.Queiroz ====\n");
             GlobalConfig.Centralizar("Hoje é " + DateTime.Now.ToLongDateString());
             Console.BackgroundColor = ConsoleColor.DarkGray;
             GlobalConfig.Linha();
+
             WriterOptions();
             var option = short.Parse(Console.ReadLine());
+            HandleMenuOption(option);
         }
 
         private static void WriterOptions()
@@ -39,14 +42,14 @@ namespace MX_Target_Projetos
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Write("\n{0}", GlobalConfig.AlinhaTexto(36, "Escolha uma das opções de estudos realizados : ", "Esquerda"));
         }
-        
-        public static void HandleMenuOption(short option)
-        {
 
+        private static void HandleMenuOption(short option)
+        {
+            
             switch (option)
             {
                 case 1:
-                    //TesteSequencial.Load();
+                    Sequencial.Load();
                     break;
                 case 2:
                     Console.WriteLine("View");

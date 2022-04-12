@@ -2,13 +2,14 @@
 
 namespace MX_Target_Projetos.Configuratios
 {
-    public static class MenuAcessoConfig
+    public class MenuAcessoConfig
     {
-        public static void Windowconfig()
+        public MenuAcessoConfig()
         {
             Console.SetWindowSize(100, 25);
             Console.Title = "Menu Principal";
             Console.ForegroundColor = ConsoleColor.White;
+
         }
     }
 }

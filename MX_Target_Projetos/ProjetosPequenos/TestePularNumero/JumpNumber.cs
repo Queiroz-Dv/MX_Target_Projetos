@@ -27,7 +27,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
                 short res = short.Parse(Console.ReadLine());
                 if (res == 1)
                 {
-                    TestJump.Load();
+                    JumpExample.Load();
                 }
                 else if (res == 2)
                 {

@@ -46,7 +46,9 @@
     <Compile Include="Configurations\AccessMenuConfig.cs" />
     <Compile Include="AccessMenu.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProjetosPequenos\PularNumeros.cs" />
+    <Compile Include="ProjetosPequenos\TestePularNumero\JumpNumber.cs" />
+    <Compile Include="ProjetosPequenos\TestePularNumero\RunJump.cs" />
+    <Compile Include="ProjetosPequenos\TestePularNumero\TestJump.cs" />
     <Compile Include="ProjetosPequenos\TesteSequencial\RunSeq.cs" />
     <Compile Include="ProjetosPequenos\TesteSequencial\Sequential.cs" />
     <Compile Include="ProjetosPequenos\TesteSequencial\TestExample.cs" />

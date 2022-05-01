@@ -1,11 +1,11 @@
 ﻿using MX_Target_Projetos.Configurations;
 using System;
 
-namespace MX_Target_Projetos.ProjetosPequenos
+namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
 {
-    public class PularNumeros
+    public class JumpNumber
     {
-        public PularNumeros()
+        public JumpNumber()
         {
             Console.Title = "Pular Números";
             Console.ForegroundColor = ConsoleColor.White;
@@ -27,11 +27,11 @@ namespace MX_Target_Projetos.ProjetosPequenos
                 short res = short.Parse(Console.ReadLine());
                 if (res == 1)
                 {
-                    ExemploInicial();
+                    TestJump.Load();
                 }
                 else if (res == 2)
                 {
-                    TesteUsuario();
+                    RunJump.Load();
                 }
                 else if (res == 0)
                 {
@@ -44,29 +44,6 @@ namespace MX_Target_Projetos.ProjetosPequenos
                     Console.ReadKey();
                 }
             }
-        }
-
-        private static void TesteUsuario()
-        {
-            Console.Clear();
-            GetDados(out int numeroInicial, out int pularNumero, out int numeroFinal);
-        }
-
-        private static void GetDados(out int numeroInicial, out int pularNumero, out int numeroFinal)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void ExemploInicial()
-        {
-            GlobalConfig.Center("Agora irei de dois em dois para você como exemplo");
-            Console.ReadKey();
-            for (int x = 1; x < 100; x += 2)
-            {
-                Console.WriteLine(x);
-            }
-            GlobalConfig.Center("Digite alguma tecla para continuar!");
-            Console.ReadKey();
         }
     }
 }

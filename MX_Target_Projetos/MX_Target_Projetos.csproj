@@ -42,12 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuratios\GlobalConfig.cs" />
-    <Compile Include="Configuratios\MenuAcessoConfig.cs" />
-    <Compile Include="MenuAcesso.cs" />
+    <Compile Include="Configurations\GlobalConfig.cs" />
+    <Compile Include="Configurations\AccessMenuConfig.cs" />
+    <Compile Include="AccessMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjetosPequenos\PularNumeros.cs" />
-    <Compile Include="ProjetosPequenos\Sequencial.cs" />
+    <Compile Include="ProjetosPequenos\TesteSequencial\RunSeq.cs" />
+    <Compile Include="ProjetosPequenos\TesteSequencial\Sequential.cs" />
+    <Compile Include="ProjetosPequenos\TesteSequencial\TestExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

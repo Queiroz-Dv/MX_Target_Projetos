@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace MX_Target_Projetos.Configuratios
+namespace MX_Target_Projetos.Configurations
 {
-    public class MenuAcessoConfig
+    public class AccessMenuConfig
     {
-        public MenuAcessoConfig()
+        public AccessMenuConfig()
         {
             Console.SetWindowSize(100, 25);
             Console.Title = "Menu Principal";

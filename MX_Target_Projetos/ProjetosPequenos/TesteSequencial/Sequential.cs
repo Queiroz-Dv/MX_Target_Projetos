@@ -1,13 +1,13 @@
 ﻿using MX_Target_Projetos.Configurations;
 using System;
 
-namespace MX_Target_Projetos.ProjetosPequenos
+namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
 {
-    public class PularNumeros
+    public class Sequential
     {
-        public PularNumeros()
+        public Sequential()
         {
-            Console.Title = "Pular Números";
+            Console.Title = "Contador Sequencial";
             Console.ForegroundColor = ConsoleColor.White;
         }
 
@@ -16,7 +16,7 @@ namespace MX_Target_Projetos.ProjetosPequenos
             while (true)
             {
                 Console.Clear();
-                GlobalConfig.Center("Bem-vindo ao Teste de Pular Números");
+                GlobalConfig.Center("Bem-vindo ao Contador Sequencial");
                 Console.BackgroundColor = ConsoleColor.DarkGray;
                 GlobalConfig.DrawLine();
                 Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Exemplo                      ||"));
@@ -27,11 +27,11 @@ namespace MX_Target_Projetos.ProjetosPequenos
                 short res = short.Parse(Console.ReadLine());
                 if (res == 1)
                 {
-                    ExemploInicial();
+                    TestExample.Load();
                 }
                 else if (res == 2)
                 {
-                    TesteUsuario();
+                    RunSeq.Load();
                 }
                 else if (res == 0)
                 {
@@ -44,29 +44,6 @@ namespace MX_Target_Projetos.ProjetosPequenos
                     Console.ReadKey();
                 }
             }
-        }
-
-        private static void TesteUsuario()
-        {
-            Console.Clear();
-            GetDados(out int numeroInicial, out int pularNumero, out int numeroFinal);
-        }
-
-        private static void GetDados(out int numeroInicial, out int pularNumero, out int numeroFinal)
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void ExemploInicial()
-        {
-            GlobalConfig.Center("Agora irei de dois em dois para você como exemplo");
-            Console.ReadKey();
-            for (int x = 1; x < 100; x += 2)
-            {
-                Console.WriteLine(x);
-            }
-            GlobalConfig.Center("Digite alguma tecla para continuar!");
-            Console.ReadKey();
         }
     }
 }

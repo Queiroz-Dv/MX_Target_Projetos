@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.ProjetosPequenos.TesteContinuo;
 using MX_Target_Projetos.ProjetosPequenos.TestePularNumero;
 using MX_Target_Projetos.ProjetosPequenos.TesteSequencial;
 using System;
@@ -54,6 +55,9 @@ namespace MX_Target_Projetos
                     break;
                 case 2:
                     JumpNumber.Load();
+                    break;
+                case 3:
+                    Counter.Load();
                     break;
                 case 0:
                     {

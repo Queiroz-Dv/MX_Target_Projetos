@@ -24,8 +24,8 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 
             Console.Clear();
             Console.WriteLine($"Tabuada de Multiplicação de {initialNumber}");
-            var calc = new CalcNumber();
-            calc.CalcMulti(initialNumber, timesToCalc);
+
+            new CalcNumber().CalcMulti(initialNumber, timesToCalc);
 
             Console.WriteLine("Tabuada Finalizada!");
             Console.ReadKey();

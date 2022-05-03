@@ -20,26 +20,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
 
         private static void ProcessData(int firstNumber, int lastNumber)
         {
-            int fNumber = firstNumber;
-            int lNumber = lastNumber;
-            if (fNumber >= lNumber)
-            {
-                GlobalConfig.Center("Esse é o modo secreto de decremento!");
-                GlobalConfig.Center("Iremos contar em ordem decrescente!");
-                GlobalConfig.Center("Aperte qualquer tecla para prosseguir");
-                Console.ReadKey();
-                ProcessNumber.Decrement(fNumber, lNumber);
-                GlobalConfig.Center("Aperte qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
-            }
-            else
-            {
-                ProcessNumber.Increment(fNumber, lNumber);
-                GlobalConfig.Center("Aperte qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
-            }
+            var process = new ProcessNumber(firstNumber, lastNumber);
         }
     }
 }

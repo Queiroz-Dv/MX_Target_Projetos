@@ -33,25 +33,13 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 
         public void CalcDiv(int initial, int times)
         {
-            for (int i = 0; i < times; i++)
+            for (int i = 1; i < times; i++)
             {
-                try
-                {
-                    int result = initial / i;
-                    if (result == 1 || result == 2 || result == 0)
-                    {
-                        Console.WriteLine("Resultados entre 0, 1 e 2 são ignorados");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine(initial + " / " + i + " = " + result);
-                    }
-                }
-                catch (Exception)
-                {
-                    throw new Exception(message: "Error");
-                }
+                int result = initial / i;
+                if (result == 0)
+                    throw new DivideByZeroException(message: "Impossível dividir por zero");
+                else
+                    Console.WriteLine(initial + " / " + i + " = " + result);
             }
         }
     }

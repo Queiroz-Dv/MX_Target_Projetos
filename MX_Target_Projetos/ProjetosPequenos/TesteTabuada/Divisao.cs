@@ -9,6 +9,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
             Console.Title = "Divisão";
             Console.ForegroundColor = ConsoleColor.White;
         }
+
         public static void Load()
         {
             ProcessarDivisao();
@@ -22,10 +23,12 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
             var timesToCalc = int.Parse(Console.ReadLine());
 
             ValidaDiv(initialNumber, timesToCalc);
+
             Console.Clear();
             Console.WriteLine($"Tabuada de Divisão de {initialNumber}");
-            var calc = new CalcNumber();
-            calc.CalcDiv(initialNumber, timesToCalc);
+
+            new CalcNumber().CalcDiv(initialNumber, timesToCalc);
+
             Console.WriteLine("Tabuada Finalizada!");
             Console.ReadKey();
         }

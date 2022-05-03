@@ -24,8 +24,9 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 
             Console.Clear();
             Console.WriteLine($"Tabuada de Adição de {initialNumber}");
-            var calc = new CalcNumber();
-            calc.CalcSoma(initialNumber, timesToCalc);
+
+            new CalcNumber().CalcSoma(initialNumber, timesToCalc);
+
             Console.WriteLine("Tabuada Finalizada!");
             Console.ReadKey();
         }

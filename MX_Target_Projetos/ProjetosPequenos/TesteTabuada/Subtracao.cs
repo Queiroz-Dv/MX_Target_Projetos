@@ -24,8 +24,9 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 
             Console.Clear();
             Console.WriteLine($"Tabuada de Subtração de {initialNumber}");
-            var calc = new CalcNumber();
-            calc.CalcSub(initialNumber, timesToCalc);
+
+            new CalcNumber().CalcSub(initialNumber, timesToCalc);
+
             Console.WriteLine("Tabuada Finalizada!");
             Console.ReadKey();
         }

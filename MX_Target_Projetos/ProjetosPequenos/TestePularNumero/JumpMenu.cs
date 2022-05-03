@@ -1,17 +1,13 @@
 ﻿using MX_Target_Projetos.Configurations;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MX_Target_Projetos.ProjetosPequenos.TesteContinuo
+namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
 {
-    public class Counter
+    public class JumpMenu
     {
-        public Counter()
+        public JumpMenu()
         {
-            Console.Title = "Contador Continuo";
+            Console.Title = "Pular Números";
             Console.ForegroundColor = ConsoleColor.White;
         }
 
@@ -20,7 +16,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteContinuo
             while (true)
             {
                 Console.Clear();
-                GlobalConfig.Center("Bem-vindo ao Contador Sequencial");
+                GlobalConfig.Center("Bem-vindo ao Teste de Pular Números");
                 Console.BackgroundColor = ConsoleColor.DarkGray;
                 GlobalConfig.DrawLine();
                 Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Exemplo                      ||"));
@@ -31,11 +27,11 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteContinuo
                 short res = short.Parse(Console.ReadLine());
                 if (res == 1)
                 {
-                    CounterExample.Load();
+                    JumpExample.Load();
                 }
                 else if (res == 2)
                 {
-                    RunCounter.Load();
+                    JumpProcess.Load();
                 }
                 else if (res == 0)
                 {

@@ -10,7 +10,6 @@ namespace MX_Target_Projetos.Configurations
             Console.WriteLine(centre.PadLeft(spaces));
             return spaces;
         }
-
         public static void DrawLine()
         {
             Console.WriteLine("+--------------------------------------------------------------------------------------------------+");
@@ -23,7 +22,7 @@ namespace MX_Target_Projetos.Configurations
             else
             {
                 Msg = Msg.PadLeft(SpacesToAdd + Msg.Length);
-                Msg = Msg.PadRight((98 - Msg.Length) + Msg.Length);
+                Msg = Msg.PadRight(98 - Msg.Length + Msg.Length);
             }
             return Msg;
         }

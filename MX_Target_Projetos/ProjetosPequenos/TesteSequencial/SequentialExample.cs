@@ -3,7 +3,7 @@ using System;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
 {
-    public class TestExample
+    public class SequentialExample
     {
         public static void Load()
         {

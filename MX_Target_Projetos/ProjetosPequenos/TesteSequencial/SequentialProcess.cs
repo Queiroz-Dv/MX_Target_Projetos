@@ -4,7 +4,7 @@ using System;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
 {
-    public class RunSeq
+    public class SequentialProcess
     {
         public static void Load()
         {

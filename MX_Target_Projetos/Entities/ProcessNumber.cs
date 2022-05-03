@@ -1,5 +1,4 @@
-﻿using MX_Target_Projetos.Configurations;
-using System;
+﻿using System;
 
 namespace MX_Target_Projetos.Entities
 {

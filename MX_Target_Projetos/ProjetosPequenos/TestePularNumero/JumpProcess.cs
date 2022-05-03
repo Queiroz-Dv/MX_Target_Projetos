@@ -3,7 +3,7 @@ using System;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
 {
-    public class RunJump
+    public class JumpProcess
     {
         public static void Load()
         {

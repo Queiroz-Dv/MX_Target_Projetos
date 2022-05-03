@@ -7,9 +7,8 @@ namespace MX_Target_Projetos.Configurations
         public AccessMenuConfig()
         {
             Console.SetWindowSize(100, 25);
-            Console.Title = "Menu Principal";
+            Console.Title = "MX Target";
             Console.ForegroundColor = ConsoleColor.White;
-
         }
     }
 }

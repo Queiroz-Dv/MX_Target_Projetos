@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.ProjetosPequenos.TesteFatorial;
 using MX_Target_Projetos.ProjetosPequenos.TestePularNumero;
 using MX_Target_Projetos.ProjetosPequenos.TesteSequencial;
 using MX_Target_Projetos.ProjetosPequenos.TesteTabuada;
@@ -10,7 +11,7 @@ namespace MX_Target_Projetos
     {
         public static void Load()
         {
-            AccessMenuConfig config = new AccessMenuConfig();
+            new AccessMenuConfig();
             Console.Clear();
             GlobalConfig.Center("==== Bem Vindo ao Portfólio de Sistemas Realizados por E.Queiroz ====\n");
             GlobalConfig.Center("Hoje é " + DateTime.Now.ToLongDateString());
@@ -48,23 +49,12 @@ namespace MX_Target_Projetos
         {
             switch (opt)
             {
-                case 1:
-                    SequentialMenu.Load();
-                    break;
-                case 2:
-                    JumpMenu.Load();
-                    break;
-                case 3:
-                    TabuadaMenu.Load();
-                    break;
-                case 0:
-                    {
-                        Console.Clear();
-                        Environment.Exit(0);
-                        break;
-                    }
-                default:
-                    break;
+                case 1: SequentialMenu.Load(); break;
+                case 2: JumpMenu.Load();       break;
+                case 3: TabuadaMenu.Load();    break;
+                case 4: FatorialMenu.Load();   break;
+                case 0: Environment.Exit(0);   break;
+                default: break;
             }
         }
     }

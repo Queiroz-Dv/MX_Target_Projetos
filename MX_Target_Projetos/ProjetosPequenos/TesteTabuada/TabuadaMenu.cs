@@ -5,11 +5,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 {
     public class TabuadaMenu
     {
-        public TabuadaMenu()
-        {
-            Console.Title = "Tabuada";
-            Console.ForegroundColor = ConsoleColor.White;
-        }
         public static void Load()
         {
             while (true)

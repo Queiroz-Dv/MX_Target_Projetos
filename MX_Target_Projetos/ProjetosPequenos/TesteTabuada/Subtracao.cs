@@ -4,12 +4,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 {
     public class Subtracao
     {
-        public Subtracao()
-        {
-            Console.Title = "Subtração";
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
         public static void Load()
         {
             ProcessarSubtracao();

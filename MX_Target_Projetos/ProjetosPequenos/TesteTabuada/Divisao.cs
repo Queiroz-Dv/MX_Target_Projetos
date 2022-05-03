@@ -4,12 +4,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 {
     public class Divisao
     {
-        public Divisao()
-        {
-            Console.Title = "Divisão";
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
         public static void Load()
         {
             ProcessarDivisao();

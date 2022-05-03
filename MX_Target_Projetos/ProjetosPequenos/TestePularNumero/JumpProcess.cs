@@ -23,7 +23,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
         private static void ProcessData(int firstNumber, int jumper, int lastNumber)
         {
             Console.Clear();
-            var process = new ProcessNumber(firstNumber,jumper, lastNumber);
+            new ProcessNumber(firstNumber,jumper, lastNumber);
         }
     }
 }

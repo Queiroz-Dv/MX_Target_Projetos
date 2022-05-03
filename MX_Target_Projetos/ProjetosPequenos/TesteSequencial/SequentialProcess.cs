@@ -20,7 +20,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
 
         private static void ProcessData(int firstNumber, int lastNumber)
         {
-            var process = new ProcessNumber(firstNumber, lastNumber);
+            new ProcessNumber(firstNumber, lastNumber);
         }
     }
 }

@@ -4,12 +4,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 {
     public class Multiplicar
     {
-        public Multiplicar()
-        {
-            Console.Title = "Multiplicação";
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
         public static void Load()
         {
             ProcessarMult();

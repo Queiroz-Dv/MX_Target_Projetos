@@ -5,12 +5,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
 {
     public class SequentialMenu
     {
-        public SequentialMenu()
-        {
-            Console.Title = "Contador Sequencial";
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
         public static void Load()
         {
             while (true)

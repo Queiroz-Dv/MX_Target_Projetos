@@ -4,12 +4,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
 {
     public class Adicao
     {
-        public Adicao()
-        {
-            Console.Title = "Adição";
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-
         public static void Load()
         {
             ProcessarSoma();

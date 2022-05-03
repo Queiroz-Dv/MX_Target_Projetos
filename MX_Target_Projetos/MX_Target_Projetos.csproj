@@ -45,6 +45,7 @@
     <Compile Include="Configurations\GlobalConfig.cs" />
     <Compile Include="Configurations\AccessMenuConfig.cs" />
     <Compile Include="AccessMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\CalcNumber.cs" />
     <Compile Include="Entities\ProcessNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjetosPequenos\TestePularNumero\JumpMenu.cs" />
@@ -53,6 +54,10 @@
     <Compile Include="ProjetosPequenos\TesteSequencial\SequentialProcess.cs" />
     <Compile Include="ProjetosPequenos\TesteSequencial\SequentialMenu.cs" />
     <Compile Include="ProjetosPequenos\TesteSequencial\SequentialExample.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Adicao.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Divisao.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Multiplicar.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Subtracao.cs" />
     <Compile Include="ProjetosPequenos\TesteTabuada\TabuadaExample.cs" />
     <Compile Include="ProjetosPequenos\TesteTabuada\TabuadaMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

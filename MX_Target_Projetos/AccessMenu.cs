@@ -46,7 +46,6 @@ namespace MX_Target_Projetos
 
         private static void LoadOptions(short opt)
         {
-            
             switch (opt)
             {
                 case 1:

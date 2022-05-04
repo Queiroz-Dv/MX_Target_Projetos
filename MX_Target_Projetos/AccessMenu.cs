@@ -1,5 +1,6 @@
 ﻿using MX_Target_Projetos.Configurations;
 using MX_Target_Projetos.ProjetosPequenos.TesteFatorial;
+using MX_Target_Projetos.ProjetosPequenos.TesteFibonacci;
 using MX_Target_Projetos.ProjetosPequenos.TestePularNumero;
 using MX_Target_Projetos.ProjetosPequenos.TesteSequencial;
 using MX_Target_Projetos.ProjetosPequenos.TesteTabuada;
@@ -53,6 +54,7 @@ namespace MX_Target_Projetos
                 case 2: JumpMenu.Load();       break;
                 case 3: TabuadaMenu.Load();    break;
                 case 4: FatorialMenu.Load();   break;
+                case 5: FibonacciMenu.Load();  break;
                 case 0: Environment.Exit(0);   break;
                 default: break;
             }

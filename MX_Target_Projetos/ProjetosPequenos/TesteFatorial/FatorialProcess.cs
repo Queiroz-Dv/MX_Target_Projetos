@@ -9,6 +9,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteFatorial
             Console.Clear();
             int val = ProcessData();
             ValidNumber(val);
+            Console.ReadKey();
         }
 
         private static int ProcessData()
@@ -41,8 +42,6 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteFatorial
                 Console.WriteLine("Fator: " + ftr);
             }
             Console.WriteLine("O fatorial de " + val + " é igual a " + ftr);
-            Console.WriteLine("Fatoração finalizada!");
-            Console.ReadKey();
         }
     }
 }

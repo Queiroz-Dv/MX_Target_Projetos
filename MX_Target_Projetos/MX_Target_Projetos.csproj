@@ -48,6 +48,9 @@
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialExample.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialMenu.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialProcess.cs" />
+    <Compile Include="ProjetosPequenos\TesteFibonacci\FibonacciExample.cs" />
+    <Compile Include="ProjetosPequenos\TesteFibonacci\FibonacciMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteFibonacci\FibonacciProcess.cs" />
     <Compile Include="ProjetosPequenos\TesteTabuada\CalcNumber.cs" />
     <Compile Include="Entities\ProcessNumber.cs" />
     <Compile Include="Program.cs" />

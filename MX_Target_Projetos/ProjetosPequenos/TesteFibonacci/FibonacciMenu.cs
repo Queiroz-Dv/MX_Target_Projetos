@@ -1,16 +1,20 @@
 ﻿using MX_Target_Projetos.Configurations;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
+namespace MX_Target_Projetos.ProjetosPequenos.TesteFibonacci
 {
-    public class SequentialMenu
+    public class FibonacciMenu
     {
         public static void Load()
         {
             while (true)
             {
                 Console.Clear();
-                GlobalConfig.Center("Bem-vindo ao Contador Sequencial");
+                GlobalConfig.Center("Bem-vindo ao Teste de Fibonacci");
                 Console.BackgroundColor = ConsoleColor.DarkGray;
                 GlobalConfig.DrawLine();
                 Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Exemplo                      ||"));
@@ -20,9 +24,13 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
                 Console.BackgroundColor = ConsoleColor.Black;
                 short res = short.Parse(Console.ReadLine());
                 if (res == 1)
-                    SequentialExample.Load();
+                {
+                    FibonacciExample.Load();
+                }
                 else if (res == 2)
-                    SequentialProcess.Load();
+                {
+                    FibonacciProcess.Load();
+                }
                 else if (res == 0)
                 {
                     AccessMenu.Load();

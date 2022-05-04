@@ -4,6 +4,7 @@ using MX_Target_Projetos.ProjetosPequenos.TesteFibonacci;
 using MX_Target_Projetos.ProjetosPequenos.TestePularNumero;
 using MX_Target_Projetos.ProjetosPequenos.TesteSequencial;
 using MX_Target_Projetos.ProjetosPequenos.TesteTabuada;
+using MX_Target_Projetos.ProjetosPequenos.TesteValidade;
 using System;
 
 namespace MX_Target_Projetos
@@ -35,10 +36,8 @@ namespace MX_Target_Projetos
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 3. Teste Tabuada                                  ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 4. Teste Fatorial                                 ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 5. Teste Fibonacci                                ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 6. Teste If Complexo                              ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 7. Teste Switch Complexo                          ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 8. Teste Validade                                 ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 9. Fechar diário                                  ||"));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 7. Teste Validade                                 ||"));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 8. Fechar diário                                  ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   ==================================================   "));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
             GlobalConfig.DrawLine();
@@ -55,6 +54,7 @@ namespace MX_Target_Projetos
                 case 3: TabuadaMenu.Load();    break;
                 case 4: FatorialMenu.Load();   break;
                 case 5: FibonacciMenu.Load();  break;
+                case 7: ValidadeMenu.Load();   break;
                 case 0: Environment.Exit(0);   break;
                 default: break;
             }

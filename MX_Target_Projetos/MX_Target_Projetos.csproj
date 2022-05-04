@@ -66,6 +66,8 @@
     <Compile Include="ProjetosPequenos\TesteTabuada\Subtracao.cs" />
     <Compile Include="ProjetosPequenos\TesteTabuada\TabuadaExample.cs" />
     <Compile Include="ProjetosPequenos\TesteTabuada\TabuadaMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteValidade\ValidadeMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteValidade\ValidadeProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

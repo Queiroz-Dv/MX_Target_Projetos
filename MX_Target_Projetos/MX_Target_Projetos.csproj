@@ -42,12 +42,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuratios\GlobalConfig.cs" />
-    <Compile Include="Configuratios\MenuAcessoConfig.cs" />
-    <Compile Include="MenuAcesso.cs" />
+    <Compile Include="Configurations\GlobalConfig.cs" />
+    <Compile Include="Configurations\AccessMenuConfig.cs" />
+    <Compile Include="AccessMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteFatorial\FatorialExample.cs" />
+    <Compile Include="ProjetosPequenos\TesteFatorial\FatorialMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteFatorial\FatorialProcess.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\CalcNumber.cs" />
+    <Compile Include="Entities\ProcessNumber.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="ProjetosPequenos\PularNumeros.cs" />
-    <Compile Include="ProjetosPequenos\Sequencial.cs" />
+    <Compile Include="ProjetosPequenos\TestePularNumero\JumpMenu.cs" />
+    <Compile Include="ProjetosPequenos\TestePularNumero\JumpProcess.cs" />
+    <Compile Include="ProjetosPequenos\TestePularNumero\JumpExample.cs" />
+    <Compile Include="ProjetosPequenos\TesteSequencial\SequentialProcess.cs" />
+    <Compile Include="ProjetosPequenos\TesteSequencial\SequentialMenu.cs" />
+    <Compile Include="ProjetosPequenos\TesteSequencial\SequentialExample.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Adicao.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Divisao.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Multiplicar.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\Subtracao.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\TabuadaExample.cs" />
+    <Compile Include="ProjetosPequenos\TesteTabuada\TabuadaMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

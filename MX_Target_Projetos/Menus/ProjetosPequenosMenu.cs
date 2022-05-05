@@ -20,6 +20,7 @@ namespace MX_Target_Projetos.Menus
         private static void MenuOption()
         {
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
+            Console.BackgroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   ==================================================   "));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Projetos e Testes de Pequena Complexidade         ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Teste Contador Sequencial                      ||"));
@@ -49,7 +50,10 @@ namespace MX_Target_Projetos.Menus
                 case 5: FibonacciMenu.Load();                 break;
                 case 7: ValidadeMenu.Load();                  break;
                 case 0: Home.Load();                          break;
-                default: Console.WriteLine("Opção inválida"); break;
+                default:
+                    Console.Clear();
+                    MenuOption();
+                    break;
             }
         }
     }

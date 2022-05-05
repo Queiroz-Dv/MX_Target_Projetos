@@ -7,15 +7,17 @@ namespace MX_Target_Projetos.Menus
     {
         public static void Show()
         {
+            Console.Clear();
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   =================================================================   "));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Nome: Eduardo B. C. Queiroz                                                          ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Idade: 26                                                         ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Formação: Letras e ADS - FACAP                                    ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Idiomas: Inglês e Português                                       ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Hobbies: Leitura e Artes                                          ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 0. Voltar                                                         ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   =================================================================   "));
+            Console.BackgroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "   =================================================================  "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "|| Nome: Eduardo B. C. Queiroz                                        "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "|| Idade: 26                                                          "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "|| Formação: Letras e ADS - FACAP                                     "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "|| Idiomas: Inglês e Português                                        "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "|| Hobbies: Leitura e Artes                                           "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "|| 0. Voltar                                                          "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "   =================================================================  "));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
             GlobalConfig.DrawLine();
             Console.BackgroundColor = ConsoleColor.Black;

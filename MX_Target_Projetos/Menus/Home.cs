@@ -22,13 +22,13 @@ namespace MX_Target_Projetos.Menus
         private static void MenuOptions()
         {
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   =================================================================   "));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Sobre                                                          ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 2. Projetos de Baixa Complexidade                                 ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 3. Projetos de Média Complexidade                                 ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 4. Projetos de Grande Complexidade                                ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 0. Sair                                                           ||"));
-            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   =================================================================   "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "   =================================================================  "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, " 1. Sobre                                                           "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, " 2. Projetos de Baixa Complexidade                                  "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, " 3. Projetos de Média Complexidade                                  "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, " 4. Projetos de Grande Complexidade                                 "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, " 0. Sair                                                            "));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(25, "   =================================================================  "));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
             GlobalConfig.DrawLine();
             Console.BackgroundColor = ConsoleColor.Black;
@@ -44,7 +44,10 @@ namespace MX_Target_Projetos.Menus
                 case 3: ProjetosMediosMenu.Load();      break;
                 case 4: ProjetosGrandesMenu.Load();     break;
                 case 0: Environment.Exit(0);            break;
-                default:                                break;
+                default:
+                    Console.Clear();
+                    Load();
+                    break;
             }
         }
     }

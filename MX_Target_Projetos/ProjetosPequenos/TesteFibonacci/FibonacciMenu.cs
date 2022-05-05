@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.Menus;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteFibonacci
                 }
                 else if (res == 0)
                 {
-                    AccessMenu.Load();
+                    ProjetosPequenosMenu.Load();
                     break;
                 }
                 else

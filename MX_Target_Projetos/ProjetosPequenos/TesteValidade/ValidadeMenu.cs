@@ -1,9 +1,6 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.Menus;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TesteValidade
 {
@@ -28,7 +25,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteValidade
                 }
                 else if (res == 0)
                 {
-                    AccessMenu.Load();
+                    ProjetosPequenosMenu.Load();
                     break;
                 }
                 else

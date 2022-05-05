@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.Menus;
 using System;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
@@ -25,12 +26,12 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteTabuada
                 short res = short.Parse(Console.ReadLine());
                 switch (res)
                 {
-                    case 1: TabuadaExample.Load();  break;
-                    case 2: Multiplicar.Load();     break;
-                    case 3: Adicao.Load();          break;
-                    case 4: Subtracao.Load();       break;
-                    case 5: Divisao.Load();         break;
-                    case 0: AccessMenu.Load();      break;
+                    case 1: TabuadaExample.Load();            break;
+                    case 2: Multiplicar.Load();               break;
+                    case 3: Adicao.Load();                    break;
+                    case 4: Subtracao.Load();                 break;
+                    case 5: Divisao.Load();                   break;
+                    case 0: ProjetosPequenosMenu.Load();      break;
 
                     default:
                             GlobalConfig.Center("Valor inválido, aperte qualquer tecla para retorna");

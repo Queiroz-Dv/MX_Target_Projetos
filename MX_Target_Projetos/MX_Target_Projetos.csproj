@@ -44,7 +44,11 @@
   <ItemGroup>
     <Compile Include="Configurations\GlobalConfig.cs" />
     <Compile Include="Configurations\AccessMenuConfig.cs" />
-    <Compile Include="AccessMenu.cs" />
+    <Compile Include="Menus\ProjetosGrandesMenu.cs" />
+    <Compile Include="Menus\ProjetosMediosMenu.cs" />
+    <Compile Include="Menus\ProjetosPequenosMenu.cs" />
+    <Compile Include="Menus\AboutMe.cs" />
+    <Compile Include="Menus\Home.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialExample.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialMenu.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialProcess.cs" />

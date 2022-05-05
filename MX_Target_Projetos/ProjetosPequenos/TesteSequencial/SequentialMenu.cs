@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.Menus;
 using System;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
@@ -25,7 +26,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
                     SequentialProcess.Load();
                 else if (res == 0)
                 {
-                    AccessMenu.Load();
+                    ProjetosPequenosMenu.Load();
                     break;
                 }
                 else

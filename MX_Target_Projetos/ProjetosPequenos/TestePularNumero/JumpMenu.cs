@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.Menus;
 using System;
 
 namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
@@ -29,7 +30,7 @@ namespace MX_Target_Projetos.ProjetosPequenos.TestePularNumero
                 }
                 else if (res == 0)
                 {
-                    AccessMenu.Load();
+                    ProjetosPequenosMenu.Load();
                     break;
                 }
                 else

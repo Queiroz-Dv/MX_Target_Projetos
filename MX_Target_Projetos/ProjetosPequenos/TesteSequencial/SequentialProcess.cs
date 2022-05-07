@@ -10,15 +10,42 @@ namespace MX_Target_Projetos.ProjetosPequenos.TesteSequencial
         {
 
             Console.Clear();
-            GlobalConfig.Center("Digite um número inicial para que eu possa contar: ");
-            int firstNumber = int.Parse(Console.ReadLine());
-            GlobalConfig.Center("Até quanto você quer que eu conte?");
-            int lastNumber = int.Parse(Console.ReadLine());
+            int? firstNumber = null;
+            while (firstNumber == null)
+            {
+                try
+                {
+                    GlobalConfig.Center("Digite um número inicial para que eu possa contar: ");
+                    firstNumber = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    GlobalConfig.Center("Número digitado inválido. Digite novamente.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
+
+            int? lastNumber = null;
+            while (lastNumber == null)
+            {
+                try
+                {
+                    GlobalConfig.Center("Até quanto você quer que eu conte?");
+                    lastNumber = int.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    GlobalConfig.Center("Número digitado inválido. Digite novamente.");
+                    Console.ReadKey();
+                    Console.Clear();
+                }
+            }
 
             ProcessData(firstNumber, lastNumber);
         }
 
-        private static void ProcessData(int firstNumber, int lastNumber)
+        private static void ProcessData(int? firstNumber, int? lastNumber)
         {
             new ProcessNumber(firstNumber, lastNumber);
         }

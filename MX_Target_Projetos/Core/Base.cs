@@ -1,4 +1,5 @@
-﻿using MX_Target_Projetos.Interfaces;
+﻿using MX_Target_Projetos.Enums;
+using MX_Target_Projetos.Interfaces;
 using MX_Target_Projetos.ValueObjects;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.IO;
 
 namespace MX_Target_Projetos.Core
 {
-    public abstract class Base : IPerson
+    public abstract class Base
     {
         protected Base(Name name, int age, string phone, Document document)
         {
@@ -22,27 +23,58 @@ namespace MX_Target_Projetos.Core
 
         }
 
-        public Name Name;
+        private Name _Name;
+        public Name Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                //_Name = value;
+                if (value.FirstName.Length < 3)
+                    Console.WriteLine("Nome deve conter pelo menos 3 caracteres");
+
+                if (value.LastName.Length > 40)
+                    Console.WriteLine("Nome deve conter pelo menos 40 caracteres");
+            }
+        }
+
+        private Document _Document;
+
+        public Document Document
+        {
+            get
+            {
+                return _Document;
+            }
+            set
+            {
+                if (value.Type == EDocumentType.CNPJ && value.Number.Length == 14)
+                    _Document = value;
+
+                if (value.Type == EDocumentType.CPF && value.Number.Length == 11)
+                    _Document = value;
+
+                throw new ArgumentOutOfRangeException("É necessário que o número digitado esteja entre 11 e 14.");
+            }
+        }
+
         public int Age;
         public string Phone;
-        public Document Document;
-
-        public void SetName(Name name) { Name = name; }
-        public void SetAge(int age) { Age = age; }
-        public void SetPhone(string phone) { Phone = phone; }
-        public void SetDocument(Document document) { Document = document; }
-
 
         public virtual void Save()
         {
             var data = this.Reader();
-            data.Add(this);
+            //data.Add(new );
+            // data.Add(this);
 
             StreamWriter writer = new StreamWriter(FilePath());
             writer.WriteLine("name;age;phone;document");
             foreach (Base personData in data)
             {
-                var line = $"{personData.Name.FirstName} ; {personData.Age} ; {personData.Phone} ; {personData.Document} ;";
+                var line = $"{personData.Name} ; {personData.Age} ; {personData.Phone} ; {personData.Document} ;";
 
                 writer.WriteLine(line);
             }
@@ -67,9 +99,14 @@ namespace MX_Target_Projetos.Core
                         var baseFile = line.Split(';');
 
                         var basePerson = (IPerson)Activator.CreateInstance(this.GetType());
-                        basePerson.SetName(baseFile[0]);
-                        basePerson.SetPhone(baseFile[1]);
-                        basePerson.SetDocument(baseFile[2]);
+                        //basePerson.SetName(baseFile[0]);
+                        //basePerson.SetName(new Name(baseFile[0], baseFile[1]));
+                        this.Name = new Name(baseFile[0], baseFile[1]);
+                        this.Age = Convert.ToInt32(baseFile[2]);
+                        this.Phone = baseFile[3];
+                        this.Document = new Document(baseFile[4], EDocumentType.CPF);
+                        //basePerson.SetPhone(baseFile[1]);
+                        //basePerson.SetDocument(baseFile[2]);
 
                         data.Add(basePerson);
                     }

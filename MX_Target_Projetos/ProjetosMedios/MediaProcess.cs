@@ -14,6 +14,7 @@ namespace MX_Target_Projetos.ProjetosMedios
 
         private static void GetStudent()
         {
+
             GlobalConfig.Center("Digite o nome do aluno: ");
             string firstName = Console.ReadLine();
 
@@ -40,18 +41,52 @@ namespace MX_Target_Projetos.ProjetosMedios
             SchoolDocument studentSchoolDocument = new SchoolDocument(schoolDocument, Enums.ESchoolDocumentType.Publico);
             Student student = new Student(name, age, document, studentSchoolDocument);
 
-            GlobalConfig.Center("Digite a primeira nota: ");
-            double n1 = double.Parse(Console.ReadLine());
-
-            GlobalConfig.Center("Digite a segunda nota: ");
-            double n2 = double.Parse(Console.ReadLine());
-
-            GlobalConfig.Center("Digite a terceira nota: ");
-            double n3 = double.Parse(Console.ReadLine());
-
-            if (n1 == -1 || n2 == -1 || n3 == -1)
+            double? n1 = null;
+            while (n1 == null)
             {
-                Console.WriteLine("Números inválidos.");
+                try
+                {
+                    GlobalConfig.Center("Digite a primeira nota: ");
+                    n1 = double.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    GlobalConfig.Center("Primeira nota inválida. Digite novamente.");
+                }
+            }
+
+            double? n2 = null;
+            while (n2 == null)
+            {
+                try
+                {
+                    GlobalConfig.Center("Digite a segunda nota: ");
+                     n2 = double.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    GlobalConfig.Center("Segunda nota inválida. Digite novamente.");
+                }
+            }
+
+            double? n3 = null;
+            while (n3 == null)
+            {
+                try
+                {
+                    GlobalConfig.Center("Digite a terceira nota: ");
+                    n3 = double.Parse(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    GlobalConfig.Center("Terceira nota inválida. Digite novamente.");
+                }
+            }
+
+
+            if (n1 < 0 || n2 < 0 || n3 < 0)
+            {
+                Console.WriteLine("Números de notas não podem ser negativos.");
                 Console.ReadKey();
                 GetStudent();
             }

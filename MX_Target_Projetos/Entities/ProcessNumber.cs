@@ -7,7 +7,7 @@ namespace MX_Target_Projetos.Entities
     {
         public ProcessNumber() { }
 
-        public ProcessNumber(int firstNumber, int lastNumber)
+        public ProcessNumber(int? firstNumber, int? lastNumber)
         {
             FirstNumber = firstNumber;
             LastNumber = lastNumber;
@@ -30,11 +30,11 @@ namespace MX_Target_Projetos.Entities
                 Increment(FirstNumber, Jumper, LastNumber);
         }
 
-        public int FirstNumber { get; private set; }
+        public int? FirstNumber { get; private set; }
         public int Jumper { get; private set; }
-        public int LastNumber { get; private set; }
+        public int? LastNumber { get; private set; }
 
-        private void Decrement(int firstNumber, int lastNumber)
+        private void Decrement(int? firstNumber, int? lastNumber)
         {
             var fNumber = firstNumber + 1;
             var lNumber = lastNumber + 1;
@@ -49,7 +49,7 @@ namespace MX_Target_Projetos.Entities
             Console.Clear();
         }
 
-        private void Increment(int firstNumber, int lastNumber)
+        private void Increment(int? firstNumber, int? lastNumber)
         {
             var fNumber = firstNumber - 1;
             var lNumber = lastNumber - 1;
@@ -64,7 +64,7 @@ namespace MX_Target_Projetos.Entities
             Console.Clear();
         }
 
-        private void Decrement(int firstNumber, int jumper, int lastNumber)
+        private void Decrement(int? firstNumber, int jumper, int? lastNumber)
         {
             for (int x = 0; firstNumber < lastNumber; x++)
             {
@@ -76,7 +76,7 @@ namespace MX_Target_Projetos.Entities
             Console.ReadKey();
         }
 
-        private void Increment(int firstNumber, int jumper, int lastNumber)
+        private void Increment(int? firstNumber, int jumper, int? lastNumber)
         {
             for (int x = 0; firstNumber < lastNumber; x++)
             {

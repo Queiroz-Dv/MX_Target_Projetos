@@ -1,10 +1,11 @@
-﻿using MX_Target_Projetos.ValueObjects;
+﻿using MX_Target_Projetos.Interfaces;
+using MX_Target_Projetos.ValueObjects;
 
 namespace MX_Target_Projetos.Entities
 {
-    public class Person
+    public class Person: IPerson
     {
-        public Person(Name name, int age, Document document)
+        public Person(Name name, int age, Document document, string phone = null)
         {
             Name = name;
             Age = age;

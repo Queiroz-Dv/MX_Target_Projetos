@@ -8,12 +8,6 @@ namespace MX_Target_Projetos.ValueObjects
         {
             FirstName = firstName;
             LastName = lastName;
-
-            if (FirstName.Length < 3)
-                Console.WriteLine("Nome deve conter pelo menos 3 caracteres");
-            
-            if (LastName.Length > 40)
-                Console.WriteLine("Nome deve conter pelo menos 40 caracteres");
         }
 
         public string FirstName { get; private set; }

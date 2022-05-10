@@ -2,16 +2,16 @@
 using MX_Target_Projetos.Menus;
 using System;
 
-namespace MX_Target_Projetos.ProjetosMedios
+namespace MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal
 {
-    public class MediaMenu
+    public class PesoIdealMenu
     {
         public static void Load()
         {
             while (true)
             {
                 Console.Clear();
-                GlobalConfig.Center("Bem-vindo ao Projeto de Média");
+                GlobalConfig.Center("Bem-vindo ao Projeto de Peso Ideal");
                 Console.BackgroundColor = ConsoleColor.DarkGray;
                 GlobalConfig.DrawLine();
                 Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Testar                       ||"));
@@ -21,7 +21,7 @@ namespace MX_Target_Projetos.ProjetosMedios
                 short res = short.Parse(Console.ReadLine());
                 if (res == 1)
                 {
-                    MediaProcess.Load();
+                    PesoIdealProcess.Load();
                 }
                 else if (res == 0)
                 {

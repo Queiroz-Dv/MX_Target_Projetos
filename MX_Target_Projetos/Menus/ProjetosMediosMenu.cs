@@ -1,5 +1,6 @@
 ﻿using MX_Target_Projetos.Configurations;
-using MX_Target_Projetos.ProjetosMedios;
+using MX_Target_Projetos.ProjetosMedios.ProjetoMedia;
+using MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal;
 using System;
 
 namespace MX_Target_Projetos.Menus
@@ -35,6 +36,7 @@ namespace MX_Target_Projetos.Menus
             switch (opt)
             {
                 case 1: MediaMenu.Load();                       break;
+                case 2: PesoIdealMenu.Load();                       break;
                 case 0: Home.Load();                            break;
                 default:
                     Console.Clear();

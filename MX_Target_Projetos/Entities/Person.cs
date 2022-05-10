@@ -3,7 +3,7 @@ using MX_Target_Projetos.ValueObjects;
 
 namespace MX_Target_Projetos.Entities
 {
-    public class Person: IPerson
+    public class Person
     {
         public Person(Name name, int age, Document document, string phone = null)
         {

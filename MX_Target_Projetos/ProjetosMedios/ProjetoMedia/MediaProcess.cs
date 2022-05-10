@@ -3,7 +3,7 @@ using MX_Target_Projetos.Entities;
 using MX_Target_Projetos.ValueObjects;
 using System;
 
-namespace MX_Target_Projetos.ProjetosMedios
+namespace MX_Target_Projetos.ProjetosMedios.ProjetoMedia
 {
     public class MediaProcess
     {
@@ -92,8 +92,8 @@ namespace MX_Target_Projetos.ProjetosMedios
             }
             else
             {
-                int md = Convert.ToInt32((n1 + n2 + n3) / 3);
-                if (md < 5)
+                var md = (n1 + n2 + n3) / 3;
+                if (md < 4)
                 {
                     GlobalConfig.Center($"Aluno: {firstName}");
                     GlobalConfig.Center($"Sobrenome: {lastName}");
@@ -103,7 +103,7 @@ namespace MX_Target_Projetos.ProjetosMedios
                     GlobalConfig.Center($"Reprovado. A média foi: {md}");
                     Console.ReadKey();
                 }
-                else if (md >= 7)
+                else if (md >= 8)
                 {
                     GlobalConfig.Center($"Aluno: {firstName}");
                     GlobalConfig.Center($"Sobrenome: {lastName}");

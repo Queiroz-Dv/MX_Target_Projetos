@@ -1,7 +1,8 @@
-﻿using MX_Target_Projetos.Enums;
-using MX_Target_Projetos.Interfaces;
+﻿using MX_Target_Projetos.Entities;
+using MX_Target_Projetos.Enums;
 using MX_Target_Projetos.ValueObjects;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -72,8 +73,10 @@ namespace MX_Target_Projetos.Core
 
             StreamWriter writer = new StreamWriter(FilePath());
             writer.WriteLine("name;age;phone;document");
-            foreach (Base personData in data)
+            IList list = data;
+            for (int i = 0; i < list.Count; i++)
             {
+                Base personData = (Base)list[i];
                 var line = $"{personData.Name} ; {personData.Age} ; {personData.Phone} ; {personData.Document} ;";
 
                 writer.WriteLine(line);
@@ -82,9 +85,9 @@ namespace MX_Target_Projetos.Core
             writer.Close();
         }
 
-        public virtual List<IPerson> Reader()
+        public virtual List<Person> Reader()
         {
-            var data = new List<IPerson>();
+            var data = new List<Person>();
 
             if (File.Exists(FilePath()))
             {
@@ -98,7 +101,7 @@ namespace MX_Target_Projetos.Core
                         if (i == 1) continue;
                         var baseFile = line.Split(';');
 
-                        var basePerson = (IPerson)Activator.CreateInstance(this.GetType());
+                        var basePerson = (Person)Activator.CreateInstance(this.GetType());
                         //basePerson.SetName(baseFile[0]);
                         //basePerson.SetName(new Name(baseFile[0], baseFile[1]));
                         this.Name = new Name(baseFile[0], baseFile[1]);

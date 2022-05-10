@@ -47,6 +47,7 @@
     <Compile Include="Configurations\AccessMenuConfig.cs" />
     <Compile Include="Core\Base.cs" />
     <Compile Include="Entities\Client.cs" />
+    <Compile Include="Entities\ImcPerson.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Enums\EDocumentType.cs" />
@@ -57,8 +58,10 @@
     <Compile Include="Menus\ProjetosPequenosMenu.cs" />
     <Compile Include="Menus\AboutMe.cs" />
     <Compile Include="Menus\Home.cs" />
-    <Compile Include="ProjetosMedios\MediaMenu.cs" />
-    <Compile Include="ProjetosMedios\MediaProcess.cs" />
+    <Compile Include="ProjetosMedios\ProjetoMedia\MediaMenu.cs" />
+    <Compile Include="ProjetosMedios\ProjetoMedia\MediaProcess.cs" />
+    <Compile Include="ProjetosMedios\ProjetoPesoIdeal\PesoIdealMenu.cs" />
+    <Compile Include="ProjetosMedios\ProjetoPesoIdeal\PesoIdealProcess.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialExample.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialMenu.cs" />
     <Compile Include="ProjetosPequenos\TesteFatorial\FatorialProcess.cs" />

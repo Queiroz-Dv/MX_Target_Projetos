@@ -5,7 +5,7 @@ namespace MX_Target_Projetos.Entities
 {
     public class ImcPerson
     {
-        public ImcPerson(Name name, string birthdate, double? height, char? gender)
+        public ImcPerson(Name name, string birthdate, double? height, string gender)
         {
             Name = name;
             Gender = gender;
@@ -14,22 +14,27 @@ namespace MX_Target_Projetos.Entities
             ProcessIMC(Gender, Height);
         }
 
-        private void ProcessIMC(char? gender, double? height)
+        private void ProcessIMC(string gender, double? height)
         {
-            if (gender == 'M')
+            if (gender.StartsWith("M"))
             {
                 GetIdealWeightToMale(height);
             }
-            else if (gender == 'F')
+            else if (gender.StartsWith("F"))
             {
                 GetIdealWeightToFemale(height);
+            }
+            else
+            {
+                Console.WriteLine("Dados para gênero inválidos, tente novamente.");
+                Console.ReadKey();
             }
         }
 
         public Name Name { get; private set; }
         public string Birthdate { get; private set; }
         public double? Height { get; private set; }
-        public char? Gender { get; private set; }
+        public string Gender { get; private set; }
 
         double GetIdealWeightToMale(double? height, double weight = 72.7)
         {

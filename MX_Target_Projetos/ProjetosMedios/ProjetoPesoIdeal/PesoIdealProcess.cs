@@ -15,33 +15,55 @@ namespace MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal
 
         private static void GetData()
         {
-            
-            GlobalConfig.Center("Digite seu nome: ");
-            string firstName = Console.ReadLine();
+            string firstName = null;
+            string lastName = null;
+            string gender = null;
+            string birthdate = null;
+            double? height = null;
 
-            GlobalConfig.Center("Digite seu sobrenome: ");
-            string lastName = Console.ReadLine();
+            while (firstName == null || lastName == null || gender == null || birthdate == null || height == null)
+            {
+                try
+                {
 
-            GlobalConfig.Center("Digite o seu sexo: ");
-            var gender = Console.ReadLine();
+                    GlobalConfig.Center("Digite seu nome: ");
+                    firstName = Console.ReadLine();
 
-            GlobalConfig.Center("Digite sua data de nascimento: ");
-            string birthdate = Console.ReadLine();
-            
-            GlobalConfig.Center("Digite sua altura: ");
-            string height = Console.ReadLine();
+                    GlobalConfig.Center("Digite seu sobrenome: ");
+                    lastName = Console.ReadLine();
 
-            var name = new Name(firstName, lastName);
-            new ImcPerson(name,birthdate, height, gender);
-            
-            ProcessData(name, gender, birthdate, height);
+                    GlobalConfig.Center("Digite o seu sexo: ");
+                    gender = Console.ReadLine();
+
+                    GlobalConfig.Center("Digite sua data de nascimento: ");
+                    birthdate = Console.ReadLine();
+
+                    GlobalConfig.Center("Digite sua altura: ");
+                    height = Convert.ToDouble(Console.ReadLine());
+
+
+                   var imcPerson = new ImcPerson(new Name(firstName, lastName), birthdate, height, gender);
+                    GetResult(imcPerson);
+                }
+                catch (Exception)
+                {
+                    GlobalConfig.Center("Dados incorretos. Digite novamente.");
+                    Console.ReadKey();
+                }
+            }
         }
 
-        private static void ProcessData(Name name, string gender, string birthdate, int weight, string height)
+        private static void GetResult(ImcPerson imcPerson)
         {
-            GlobalConfig.Center($"Dados de {name}");
+
+            GlobalConfig.Center($"Dados de {imcPerson.Name.ToString()}");
             Console.WriteLine("");
-            GlobalConfig.Center($"Data de Nascimento: {birthdate}");
+            GlobalConfig.Center($"Data de Nascimento: {imcPerson.Birthdate}");
+            GlobalConfig.Center($"Sua altura: {imcPerson.Height}");
+            Console.ReadKey();
+
         }
+
+        
     }
 }

@@ -21,6 +21,7 @@ namespace MX_Target_Projetos.Menus
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   ==================================================   "));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| Projetos e Testes de Pequena Complexidade         ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 1. Sistema de Média                               ||"));
+            Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 2. Sistema de IMC                                 ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "|| 0. Voltar                                         ||"));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(35, "   ==================================================   "));
             Console.WriteLine("|{0}|", GlobalConfig.AlignText(0, ""));
@@ -36,7 +37,7 @@ namespace MX_Target_Projetos.Menus
             switch (opt)
             {
                 case 1: MediaMenu.Load();                       break;
-                case 2: PesoIdealMenu.Load();                       break;
+                case 2: PesoIdealMenu.Load();                   break;
                 case 0: Home.Load();                            break;
                 default:
                     Console.Clear();

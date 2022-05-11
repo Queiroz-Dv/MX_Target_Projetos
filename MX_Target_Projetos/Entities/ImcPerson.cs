@@ -1,4 +1,5 @@
 ﻿using System;
+using MX_Target_Projetos.Configurations;
 using MX_Target_Projetos.ValueObjects;
 
 namespace MX_Target_Projetos.Entities
@@ -18,11 +19,25 @@ namespace MX_Target_Projetos.Entities
         {
             if (gender.StartsWith("M"))
             {
-                GetIdealWeightToMale(height);
+                //GetIdealWeightToMale(height);
+
+                GlobalConfig.Center($"Dados de {Name.ToString()}");
+                Console.WriteLine("");
+                GlobalConfig.Center($"Data de Nascimento: {Birthdate}");
+                GlobalConfig.Center($"Sua altura: {Height}");
+                GlobalConfig.Center($"Seu IMC é: {GetIdealWeightToMale(height).ToString("F")}");
+                Console.ReadKey();
             }
             else if (gender.StartsWith("F"))
             {
-                GetIdealWeightToFemale(height);
+                //GetIdealWeightToFemale(height);
+
+                GlobalConfig.Center($"Dados de {Name.ToString()}");
+                Console.WriteLine("");
+                GlobalConfig.Center($"Data de Nascimento: {Birthdate}");
+                GlobalConfig.Center($"Sua altura: {Height}");
+                GlobalConfig.Center($"Seu IMC é: {GetIdealWeightToMale(height).ToString("F")}");
+                Console.ReadKey();
             }
             else
             {
@@ -36,8 +51,9 @@ namespace MX_Target_Projetos.Entities
         public double? Height { get; private set; }
         public string Gender { get; private set; }
 
-        double GetIdealWeightToMale(double? height, double weight = 72.7)
+        private double GetIdealWeightToMale(double? height)
         {
+            double weight = 72.7;
             double idealWeight = Convert.ToDouble(weight * height) - 58;
             return idealWeight;
         }

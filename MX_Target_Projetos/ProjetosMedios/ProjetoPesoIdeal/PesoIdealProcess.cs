@@ -25,7 +25,6 @@ namespace MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal
             {
                 try
                 {
-
                     GlobalConfig.Center("Digite seu nome: ");
                     firstName = Console.ReadLine();
 
@@ -41,9 +40,7 @@ namespace MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal
                     GlobalConfig.Center("Digite sua altura: ");
                     height = Convert.ToDouble(Console.ReadLine());
 
-
                    var imcPerson = new ImcPerson(new Name(firstName, lastName), birthdate, height, gender);
-                    GetResult(imcPerson);
                 }
                 catch (Exception)
                 {
@@ -53,17 +50,5 @@ namespace MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal
             }
         }
 
-        private static void GetResult(ImcPerson imcPerson)
-        {
-
-            GlobalConfig.Center($"Dados de {imcPerson.Name.ToString()}");
-            Console.WriteLine("");
-            GlobalConfig.Center($"Data de Nascimento: {imcPerson.Birthdate}");
-            GlobalConfig.Center($"Sua altura: {imcPerson.Height}");
-            Console.ReadKey();
-
-        }
-
-        
     }
 }

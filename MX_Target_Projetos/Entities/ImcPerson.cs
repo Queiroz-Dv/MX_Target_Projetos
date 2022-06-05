@@ -21,22 +21,22 @@ namespace MX_Target_Projetos.Entities
             {
                 //GetIdealWeightToMale(height);
 
-                GlobalConfig.Center($"Dados de {Name.ToString()}");
+                GlobalConfig.Center($"Dados de {Name}");
                 Console.WriteLine("");
                 GlobalConfig.Center($"Data de Nascimento: {Birthdate}");
                 GlobalConfig.Center($"Sua altura: {Height}");
-                GlobalConfig.Center($"Seu IMC é: {GetIdealWeightToMale(height).ToString("F")}");
+                GlobalConfig.Center($"Seu IMC é: {GetIdealWeightToMale(height).ToString("N")}");
                 Console.ReadKey();
             }
             else if (gender.StartsWith("F"))
             {
                 //GetIdealWeightToFemale(height);
 
-                GlobalConfig.Center($"Dados de {Name.ToString()}");
+                GlobalConfig.Center($"Dados de {Name}");
                 Console.WriteLine("");
                 GlobalConfig.Center($"Data de Nascimento: {Birthdate}");
                 GlobalConfig.Center($"Sua altura: {Height}");
-                GlobalConfig.Center($"Seu IMC é: {GetIdealWeightToMale(height).ToString("F")}");
+                GlobalConfig.Center($"Seu IMC é: {GetIdealWeightToFemale(height).ToString("N")}");
                 Console.ReadKey();
             }
             else

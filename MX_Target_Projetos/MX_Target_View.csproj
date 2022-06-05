@@ -50,14 +50,12 @@
     <Compile Include="Entities\ImcPerson.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\Student.cs" />
-    <Compile Include="Enums\EDocumentType.cs" />
-    <Compile Include="Enums\ESchoolDocumentType.cs" />
-    <Compile Include="Interfaces\IPerson.cs" />
     <Compile Include="Menus\ProjetosGrandesMenu.cs" />
     <Compile Include="Menus\ProjetosMediosMenu.cs" />
     <Compile Include="Menus\ProjetosPequenosMenu.cs" />
     <Compile Include="Menus\AboutMe.cs" />
     <Compile Include="Menus\Home.cs" />
+    <Compile Include="ProjetosMedios\CalculoSalarial\CalculoSalario.cs" />
     <Compile Include="ProjetosMedios\ProjetoMedia\MediaMenu.cs" />
     <Compile Include="ProjetosMedios\ProjetoMedia\MediaProcess.cs" />
     <Compile Include="ProjetosMedios\ProjetoPesoIdeal\PesoIdealMenu.cs" />
@@ -86,13 +84,12 @@
     <Compile Include="ProjetosPequenos\TesteValidade\ValidadeMenu.cs" />
     <Compile Include="ProjetosPequenos\TesteValidade\ValidadeProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueObjects\Document.cs" />
-    <Compile Include="ValueObjects\Name.cs" />
-    <Compile Include="ValueObjects\SchoolDocument.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using MX_Target_Projetos.Configurations;
+using MX_Target_Projetos.ProjetosMedios.CalculoSalarial;
 using MX_Target_Projetos.ProjetosMedios.ProjetoMedia;
 using MX_Target_Projetos.ProjetosMedios.ProjetoPesoIdeal;
 using System;
@@ -38,6 +39,7 @@ namespace MX_Target_Projetos.Menus
             {
                 case 1: MediaMenu.Load();                       break;
                 case 2: PesoIdealMenu.Load();                   break;
+                case 3: CalculoSalario.Load();                  break;
                 case 0: Home.Load();                            break;
                 default:
                     Console.Clear();
@@ -45,5 +47,5 @@ namespace MX_Target_Projetos.Menus
                     break;
             }
         }
-    }
+    }      
 }

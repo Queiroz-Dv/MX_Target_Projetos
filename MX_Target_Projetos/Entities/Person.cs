@@ -3,7 +3,7 @@ using MX_Target_Projetos.ValueObjects;
 
 namespace MX_Target_Projetos.Entities
 {
-    public class Person
+    public sealed class Person
     {
         public Person(Name name, int age, Document document, string phone = null)
         {
@@ -15,5 +15,7 @@ namespace MX_Target_Projetos.Entities
         public Name Name { get; private set; }
         public int Age { get; private set; }
         public Document Document { get; private set; }
+        public double? Height { get; private set; }
+        public string Gender { get; private set; }
     }
 }

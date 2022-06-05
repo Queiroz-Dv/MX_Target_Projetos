@@ -39,7 +39,7 @@ namespace MX_Target_Projetos.ProjetosMedios.ProjetoMedia
             Name name = new Name(firstName, lastName);
             Document document = new Document(studentDocument, Enums.EDocumentType.CPF);
             SchoolDocument studentSchoolDocument = new SchoolDocument(schoolDocument, Enums.ESchoolDocumentType.Publico);
-            Student student = new Student(name, age, document, studentSchoolDocument);
+            _ = new Student(name, age, document, studentSchoolDocument);
 
             double? n1 = null;
             while (n1 == null)

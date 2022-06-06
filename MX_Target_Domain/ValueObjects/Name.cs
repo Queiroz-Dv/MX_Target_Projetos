@@ -1,5 +1,4 @@
 ﻿using MX_Target_Domain.Validation;
-using System;
 
 namespace MX_Target_Domain.ValueObjects
 {

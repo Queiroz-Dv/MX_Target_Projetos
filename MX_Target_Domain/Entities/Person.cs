@@ -5,14 +5,22 @@ namespace MX_Target_Domain.Entities
 {
     public sealed class Person : Entity
     {
-        public Person(Name name, int age, Document document, double? height, double weight, Gender gender)
+        public Person(int id, Name name, Age age, Document document, double? height, double weight, Gender gender)
+        {
+            Age = age;
+            DomainExceptionValidation.When(id < 0, "Invalid Id value.");
+            Id = id;
+            ValidateDomain(name, document, height, weight, gender);
+        }
+
+        public Person(Name name, Age age, Document document, double? height, double weight, Gender gender)
         {
             Age = age;
             ValidateDomain(name, document, height, weight, gender);
         }
 
         public Name Name { get; private set; }
-        public int Age { get; private set; }
+        public Age Age { get; private set; }
         public Document Document { get; private set; }
         public double? Height { get; private set; }
         public double Weight { get; private set; }

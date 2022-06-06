@@ -1,29 +1,35 @@
-﻿using MX_Target_Domain.Validation;
-
-namespace MX_Target_Domain.ValueObjects
+﻿namespace MX_Target_Domain.ValueObjects
 {
     public sealed class Gender
     {
-        public Gender(bool female, bool male)
+        public Gender(char genderType)
         {
-            ValidateDomain(female, male);
+            ValidateValueObject(genderType);
         }
 
-        public bool Female { get; private set; }
-        public bool Male { get; private set; }
-
-        private void ValidateDomain(bool female, bool male)
+        private void ValidateValueObject(char genderType)
         {
-            DomainExceptionValidation.When(female == false || male == false, "Invalid gender type. " +
-                "Gender is required");
-
-            SetValues(female, male);
+            GetGenderType(genderType);
+            SetGender(genderType);
         }
 
-        private void SetValues(bool female, bool male)
+        public char GenderType { get; private set; }
+
+        private string GetGenderType(char genderType)
         {
-            Female = female;
-            Male = male;
+            if (genderType == 'M')
+                return "Male";
+            
+            if (genderType == 'F')
+                return "Female";
+            
+            return "Other/non binary";
+        }
+
+        private void SetGender(char genderType)
+        {
+
+            GenderType = genderType;
         }
     }
 }
